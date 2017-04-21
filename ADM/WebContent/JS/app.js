@@ -4,7 +4,7 @@
 
 	/* App Module */
 
-	var app = angular.module("app", [ 'controllers', 'ui.router' ]).run(
+	var app = angular.module("app", [ 'controllers', 'directives', 'ui.router', 'ui.select', 'ngSanitize' ]).run(
 			[ '$rootScope', '$state', function($rootScope, $state) {
 
 				$rootScope.check = "rootScope is checkd !";
@@ -32,6 +32,8 @@
 		addRout('activities', '/activities', 'activities');
 
 		addRout('contact', '/contact', 'contact');
+
+		addRout('prices', '/prices', 'prices');
 
 		function addRout(state, url, template) {
 			$stateProvider.state(state, {

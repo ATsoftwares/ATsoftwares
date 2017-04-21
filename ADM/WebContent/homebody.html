@@ -10,16 +10,16 @@
 	<div class="carousel-inner" role="listbox">
 		<!-- image slides -->
 		<div class="item active">
-			<img class="carousel-height" src="images/world-point.jpg" height="700">
+			<img class="carousel-height" src="images/world-point2.jpg" height="700">
 			<div class="container carousel-caption carousel-container">
-				<div class="text-center text-size-60">Creating your company become easy!</div>
-				<div class="text-center learnBtnPos ">
+				<div class="text-left text-size-60">Creating your company become easy!</div>
+				<div class="text-left learnBtnPos ">
 					<button class="btn btn-default learnBtn">How It works?</button>
 				</div>
-				<div class="text-center learnBtnPos ">
+				<div class="text-left learnBtnPos ">
 					<button class="btn btn-default learnBtn">Learn More ></button>
 				</div>
-				<div class="text-center learnBtnPos ">
+				<div class="text-left learnBtnPos ">
 					<button class="btn btn-default learnBtn">Get Started Now</button>
 				</div>
 			</div>
@@ -49,66 +49,15 @@
 	</div>
 </div>
 <div class="row padd-top-10">
-	<div class="col-sm-4">
-		<div class="service-box">
-			<div class="service-img-container">
-				<img src="images/comp.jpg" class="img-responsive image">
-				<div class="middle">
-					<span class="text-center text-20 text-bold">Company formation and administration</span>
-					<!-- <span class="fa fa-plus fa-3x"></span> -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="service-box">
-			<div class="service-img-container">
-				<img src="images/shake.jpg" class="img-responsive image">
-				<div class="middle">
-					<span class="text-center text-20 text-bold">Trust formation and administration</span>
-					<!-- <span class="text-center fa fa-plus fa-3x"></span> -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="service-box">
-			<div class="service-img-container">
-				<img src="bard.jpg" class="img-responsive image">
-				<div class="middle">
-					<span class="fa fa-plus fa-3x"></span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="row padd-top-10">
-	<div class="col-sm-4">
-		<div class="service-box">
-			<div class="service-img-container">
-				<img src="bard.jpg" class="img-responsive image">
-				<div class="middle">
-					<span class="fa fa-plus fa-3x"></span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="service-box">
-			<div class="service-img-container">
-				<img src="images/financial.jpg" class="img-responsive image">
-				<div class="middle">
-					<span class="text-center text-20 text-bold">Financial Operations</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="service-box">
-			<div class="service-img-container">
-				<img src="bard.jpg" class="img-responsive image">
-				<div class="middle">
-					<span class="fa fa-plus fa-3x"></span>
+	<div ng-repeat="box in serviceBox">
+		<div class="col-sm-4">
+			<div class="service-box">
+				<div class="service-img-container">
+					<img src="{{box.imagePath}}" class="img-responsive image">
+					<div class="{{box.middleCss}}">
+						<span class="{{box.textCss}}">{{box.imageText}}</span>
+						<!-- <span class="fa fa-plus fa-3x"></span> -->
+					</div>
 				</div>
 			</div>
 		</div>

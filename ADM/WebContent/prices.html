@@ -1,0 +1,52 @@
+
+<section class="col-sm-12 padd-top-10 row">
+	<h1>Prices</h1>
+	<div class="col-sm-3">
+		<label class="label">Areas:</label>
+		<ui-select ng-model="Area" theme="bootstrap"> <ui-select-match> <span
+			ng-bind="$select.selected.name"></span> </ui-select-match> <ui-select-choices
+			repeat="item.id as item in areas | filter: $select.search"> <span ng-bind="item.value"></span> </ui-select-choices> </ui-select>
+	</div>
+	<div class="col-sm-3">
+		<label class="label">Countries:</label>
+		<ui-select ng-model="country" theme="bootstrap"> <ui-select-match> <span
+			ng-bind="$select.selected.name"></span> </ui-select-match> <ui-select-choices
+			repeat="item.id as item in countries | filter: $select.search"> <span ng-bind="item.name"></span>
+		</ui-select-choices> </ui-select>
+	</div>
+	<div class="col-sm-3">
+		<label class="label">Shore</label>
+		<ui-select ng-model="isShore" theme="bootstrap"> <ui-select-match> <span
+			ng-bind="$select.selected.value"></span> </ui-select-match> <ui-select-choices
+			repeat="item.id as item in shores | filter: $select.search"> <span ng-bind="item.value"></span> </ui-select-choices>
+		</ui-select>
+	</div>
+	<div class="col-sm-3">
+		<label class="label">Price Amount</label>
+		<ui-select ng-model="amount" theme="bootstrap"> <ui-select-match> <span
+			ng-bind="$select.selected.value"></span> </ui-select-match> <ui-select-choices
+			repeat="item.id as item in amounts | filter: $select.search"> <span ng-bind="item.value"></span>
+		</ui-select-choices> </ui-select>
+	</div>
+</section>
+<section style="padding: 20px 0px;" class="row">
+	<div class="col-sm-12">
+		<div class="col-sm-3">
+			<div class="countries-box">
+				<h1>Countries</h1>
+			</div>
+		</div>
+		<div class="col-sm-9">
+			<div class="google-maps-box">
+				<h1>Google Maps</h1>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="row">
+	<div class="col-sm-12">
+		<div class="pricing-box">
+			<h1 class="text-center">Pricing Info</h1>
+		</div>
+	</div>
+</section>
