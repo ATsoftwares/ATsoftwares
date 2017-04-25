@@ -20,10 +20,11 @@
 		};
 	});
 
-	moduleCntrl.controller('pricesCntrl', function($rootScope, $scope, $http, $state, $timeout, NgMap) {
+	moduleCntrl.controller('pricesCntrl', function($rootScope, $scope, $http, $state, $timeout, $filter, NgMap) {
 
 		$scope.model = {};
 		$scope.model.map = {};
+		$scope.search = {};
 
 		NgMap.getMap().then(function(map) {
 			$scope.map = map;
@@ -36,160 +37,180 @@
 				},
 				zoom : $scope.countries[0].zoom
 			};
+
+			$scope.selectedCountry = $scope.countries[0].name;
 		});
 
-		$scope.countries = [ {
+		// America Europe Afrirca Far East and Pacific
+		$scope.countries = [
+		// Onshore countries
+		{
 			id : 1,
 			name : "Israel",
+			area : "Asia",
 			price : "1200$",
 			center : {
 				latitude : 31.046051,
 				longitude : 34.851612
 			},
-			type : "onshore",
+			type : "Onshore",
 			zoom : 7
 		}, {
 			id : 2,
 			name : "USA",
+			area : "America",
 			price : "1500$",
 			center : {
 				latitude : 37.090240,
 				longitude : -95.712891
 			},
-			type : "onshore",
+			type : "Onshore",
 			zoom : 4
 		}, {
 			id : 3,
 			name : "UK",
+			area : "Europe",
 			price : "1800$",
 			center : {
 				latitude : 55.378051,
 				longitude : -3.435973
 			},
-			type : "onshore",
+			type : "Onshore",
 			zoom : 5
 		}, {
 			id : 5,
 			name : "France",
+			area : "Europe",
 			price : "1300$",
 			center : {
 				latitude : 46.227638,
 				longitude : 2.213749
 			},
-			type : "onshore",
+			type : "Onshore",
 			zoom : 5
 		},
-		// offshore countries
+		// Offshore countries
 		{
 			id : 5,
 			name : "Saint Vincent & the Grenadines",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 13.252818,
+				longitude : -61.197163
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 8
 		}, {
 			id : 5,
 			name : "Marshal Islands",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 11.324691,
+				longitude : 166.841742
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 9
 		}, {
 			id : 5,
 			name : "Dominica",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 15.414999,
+				longitude : -61.370976
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 9
 		}, {
 			id : 5,
 			name : "Belize",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 17.189877,
+				longitude : -88.497650
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 6
 		}, {
 			id : 5,
 			name : "Curacao",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 12.169570,
+				longitude : -68.990020
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 9
 		}, {
 			id : 5,
 			name : "Panama",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 8.537981,
+				longitude : -80.782127
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 6
 		}, {
 			id : 5,
 			name : "Costa Rica",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 9.748917,
+				longitude : -83.753428
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 6
 		}, {
 			id : 5,
 			name : "Anguilla",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 18.220554,
+				longitude : -63.068615
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 8
 		}, {
 			id : 5,
 			name : "Seychelles",
+			area : "Africa",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : -4.679574,
+				longitude : 55.491977
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 8
 		}, {
 			id : 5,
 			name : "British Virgin Islands",
+			area : "America",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : 18.420695,
+				longitude : -64.639968
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 7
 		}, {
 			id : 5,
 			name : "Vanuatu",
+			area : "Far East and Pacific",
 			price : "1300$",
 			center : {
-				latitude : 46.227638,
-				longitude : 2.213749
+				latitude : -15.376706,
+				longitude : 166.959158
 			},
-			type : "offshore",
-			zoom : 5
+			type : "Offshore",
+			zoom : 7
 		} ];
 
 		/*
@@ -228,6 +249,9 @@
 		}, {
 			value : "Far East and Pacific",
 			id : "4"
+		}, {
+			value : "Asia",
+			id : "5"
 		} ];
 
 		$scope.amounts = [ {
@@ -241,9 +265,11 @@
 			id : 2
 		} ];
 
-		$scope.model.area = "0";
-		$scope.model.amount = 0;
-		$scope.model.isShore = 0;
+		$scope.search.area = "ALL";
+		$scope.search.amount = "ALL";
+		$scope.search.isShore = "ALL";
+
+		$scope.filterdCountries = $scope.countries;
 
 		$scope.countryClick = function(country) {
 			$scope.model.map.center = {
@@ -251,18 +277,52 @@
 				lng : country.center.longitude
 			}
 
+			$scope.selectedCountry = country.name;
 			$scope.map.setCenter($scope.model.map.center);
 			$scope.map.setZoom(country.zoom);
 			$scope.marker.setPosition($scope.model.map.center);
 		};
 
-		$scope.centerChanged = function(event) {
-			$timeout(function() {
-				$scope.map.panTo({
-					lat : $scope.model.map.center.lat,
-					lng : $scope.model.map.center.lng
-				});
-			}, 1000);
+		/*
+		 * $scope.centerChanged = function(event) { $timeout(function() { $scope.map.panTo({ lat : $scope.model.map.center.lat, lng :
+		 * $scope.model.map.center.lng }); }, 1000); }
+		 */
+
+		$scope.filterCountries = function(country) {
+			if ($scope.search.area == "ALL" && $scope.search.amount == "ALL" && $scope.search.isShore == "ALL") {
+				return true;
+			} else if ($scope.search.area != "ALL" && $scope.search.amount != "ALL" && $scope.search.isShore != "ALL") {
+				if (country.area == $scope.search.area && country.price <= $scope.search.amount
+						&& country.type == $scope.search.isShore) {
+					return true;
+				}
+			} else if ($scope.search.area != "ALL" && $scope.search.amount == "ALL" && $scope.search.isShore == "ALL") {
+				if (country.area == $scope.search.area) {
+					return true;
+				}
+			} else if ($scope.search.area == "ALL" && $scope.search.amount == "ALL" && $scope.search.isShore != "ALL") {
+				if (country.type == $scope.search.isShore) {
+					return true;
+				}
+			} else if ($scope.search.area == "ALL" && $scope.search.amount != "ALL" && $scope.search.isShore == "ALL") {
+				if (country.price <= $scope.search.amount) {
+					return true;
+				}
+			} else if ($scope.search.area != "ALL" && $scope.search.amount != "ALL" && $scope.search.isShore == "ALL") {
+				if (country.area == $scope.search.area && country.price <= $scope.search.amount) {
+					return true;
+				}
+			} else if ($scope.search.area != "ALL" && $scope.search.amount == "ALL" && $scope.search.isShore != "ALL") {
+				if (country.area == $scope.search.area && country.type <= $scope.search.isShore) {
+					return true;
+				}
+			} else if ($scope.search.area == "ALL" && $scope.search.amount != "ALL" && $scope.search.isShore != "ALL") {
+				if (country.type == $scope.search.isShore && country.price <= $scope.search.amount) {
+					return true;
+				}
+			}
+
+			return false;
 		}
 
 	});
