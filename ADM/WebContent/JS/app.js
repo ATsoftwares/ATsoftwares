@@ -4,8 +4,8 @@
 
 	/* App Module */
 
-	var app = angular.module("app", [ 'controllers', 'directives', 'ui.router', 'ui.select', 'ngSanitize' ]).run(
-			[ '$rootScope', '$state', function($rootScope, $state) {
+	var app = angular.module("app", [ 'controllers', 'directives', 'ui.router', 'ui.select', 'ngSanitize', 'ngMap' ])
+			.run([ '$rootScope', '$state', function($rootScope, $state) {
 
 				$rootScope.check = "rootScope is checkd !";
 
