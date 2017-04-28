@@ -1,62 +1,60 @@
-<section class=" padd-top-10 row">
-	<div class="col-sm-12">
+<div class="container">
+	<section class=" padd-top-10 row">
 		<div class="col-sm-12">
-			<h3>Find Location:</h3>
+			<div class="col-sm-12">
+				<h3>Find Location:</h3>
+			</div>
+			<div class="col-sm-2">
+				<label class="label">Areas:</label>
+				<ui-select ng-model="search.area" theme="bootstrap"> <ui-select-match> <span
+					ng-bind="$select.selected.value"></span> </ui-select-match> <ui-select-choices
+					repeat="item.value as item in areas | filter: $select.search"> <span ng-bind="item.value"></span>
+				</ui-select-choices> </ui-select>
+			</div>
+			<div class="col-sm-2">
+				<label class="label">Type:</label>
+				<ui-select ng-model="search.isShore" theme="bootstrap"> <ui-select-match> <span
+					ng-bind="$select.selected.value"></span> </ui-select-match> <ui-select-choices
+					repeat="item.value as item in shores | filter: $select.search"> <span ng-bind="item.value"></span>
+				</ui-select-choices> </ui-select>
+			</div>
+			<div class="col-sm-2">
+				<label class="label">Price Range</label>
+				<ui-select ng-model="search.amount" theme="bootstrap"> <ui-select-match> <span
+					ng-bind="$select.selected.value"></span> </ui-select-match> <ui-select-choices
+					repeat="item.value as item in amounts | filter: $select.search"> <span ng-bind="item.value"></span>
+				</ui-select-choices> </ui-select>
+			</div>
 		</div>
-		<div class="col-sm-2">
-			<label class="label">Areas:</label>
-			<ui-select ng-model="search.area" theme="bootstrap"> <ui-select-match> <span
-				ng-bind="$select.selected.value"></span> </ui-select-match> <ui-select-choices
-				repeat="item.value as item in areas | filter: $select.search"> <span ng-bind="item.value"></span>
-			</ui-select-choices> </ui-select>
-		</div>
-		<div class="col-sm-2">
-			<label class="label">Shore:</label>
-			<ui-select ng-model="search.isShore" theme="bootstrap"> <ui-select-match> <span
-				ng-bind="$select.selected.value"></span> </ui-select-match> <ui-select-choices
-				repeat="item.value as item in shores | filter: $select.search"> <span ng-bind="item.value"></span>
-			</ui-select-choices> </ui-select>
-		</div>
-		<div class="col-sm-2">
-			<label class="label">Price Range</label>
-			<ui-select ng-model="search.amount" theme="bootstrap"> <ui-select-match> <span
-				ng-bind="$select.selected.value"></span> </ui-select-match> <ui-select-choices
-				repeat="item.value as item in amounts | filter: $select.search"> <span ng-bind="item.value"></span>
-			</ui-select-choices> </ui-select>
-		</div>
-		<!-- <div class="col-sm-1">
-			<label class="label">&nbsp;</label>
-			<button style="width: 100%;" class="btn btn-default" ng-click="">Find</button>
-		</div> -->
-	</div>
-</section>
-<section style="padding: 20px 0px;" class="row">
-	<div class="col-sm-12">
-		<div class="col-sm-4">
-			<div class="countries-box">
-				<div class="text-center countriesList">Countries</div>
-				<!-- <div class="col-sm-8">
+	</section>
+	<!-- <div class="col-sm-8">
 					<span class="">State</span>
 				</div>
 				<div class="col-sm-4">
 					<span class="">price</span>
 				</div> -->
-				<div class="country-list-wrapper clearLeft">
-					<div style="font-size: 17px;" class="country-padd"
-						ng-repeat="country in filterdCountries | orderBy:'name' | filter:filterCountries" ng-click="countryClick(country)">
-						<div class="col-sm-1 text-center ">
-							<i class="fa fa-flag" aria-hidden="true"></i>
-						</div>
-						<div class="col-sm-7 text-left">
-							<span> {{country.name}} </span>
-						</div>
-						<div class="col-sm-4 text-center">
-							<span>{{country.price}} </span>
+	<section style="padding: 20px 0px;" class="row">
+		<div class="col-sm-12">
+			<div class="col-sm-4">
+				<div class="countries-box">
+					<div class="text-center countriesList">Countries</div>
+					<div class="country-list-wrapper clearLeft">
+						<div style="font-size: 14px;" class="country-padd"
+							ng-repeat="country in filterdCountries | orderBy:'name' | filter:filterCountries"
+							ng-click="countryClick(country)">
+							<div class="col-sm-1 text-center ">
+								<i class="fa fa-flag" aria-hidden="true"></i>
+							</div>
+							<div class="col-sm-7 text-left">
+								<span> {{country.name}} </span>
+							</div>
+							<div class="col-sm-3 text-right">
+								<span>{{country.price}} </span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- <div class="country-list-wrapper">
+				<!-- <div class="country-list-wrapper">
 				<table class="table table-responsive table-borderd text-center ">
 					<thead>
 						<tr class="text-center">
@@ -72,21 +70,23 @@
 					</tbody>
 				</table>
 			</div> -->
-		</div>
-		<div class="col-sm-8">
-			<div class="google-maps-box">
+			</div>
+			<div class="col-sm-8">
 				<div class="google-maps-box">
-					<ng-map class="prices-map" zoom="{{model.map.zoom}}" center="{{model.map.center}}"
-						on-center-changed="centerChanged()"> <marker position="{{model.map.center}}"></marker> </ng-map>
+					<div class="google-maps-box">
+						<ng-map class="prices-map" zoom="{{model.map.zoom}}" center="{{model.map.center}}"> <marker
+							position="{{model.map.center}}"></marker> </ng-map>
+						<!-- on-center-changed="centerChanged()" -->
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
-<section class="row">
-	<div class="col-sm-12">
-		<div class="pricing-box">
-			<h1 class="text-center">{{selectedCountry}}</h1>
+	</section>
+	<section class="row">
+		<div class="col-sm-12">
+			<div class="pricing-box">
+				<h1 class="text-center">{{selectedCountry}}</h1>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</div>

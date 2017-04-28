@@ -92,7 +92,7 @@
 		// Offshore countries
 		{
 			id : 5,
-			name : "Saint Vincent & the Grenadines",
+			name : "Saint Vin. & the Grenad.",
 			area : "America",
 			price : "1300$",
 			center : {
@@ -282,11 +282,6 @@
 			$scope.map.setZoom(country.zoom);
 			$scope.marker.setPosition($scope.model.map.center);
 		};
-
-		/*
-		 * $scope.centerChanged = function(event) { $timeout(function() { $scope.map.panTo({ lat : $scope.model.map.center.lat, lng :
-		 * $scope.model.map.center.lng }); }, 1000); }
-		 */
 
 		$scope.filterCountries = function(country) {
 			if ($scope.search.area == "ALL" && $scope.search.amount == "ALL" && $scope.search.isShore == "ALL") {
