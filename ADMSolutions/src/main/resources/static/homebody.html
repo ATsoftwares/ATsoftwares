@@ -1,0 +1,135 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+	</ol>
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		<!-- image slides -->
+		<div class="item active">
+			<img class="carousel-height" src="images/world-point2.jpg" height="700">
+			<div class="container carousel-caption carousel-container">
+				<div class="text-left text-size-60">Creating your company become easy!</div>
+				<div class="text-left learnBtnPos ">
+					<button class="btn btn-default learnBtn">How It works?</button>
+				</div>
+				<div class="text-left learnBtnPos ">
+					<button class="btn btn-default learnBtn">Learn More ></button>
+				</div>
+				<div class="text-left learnBtnPos ">
+					<button class="btn btn-default learnBtn">Get Started Now</button>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<img class="carousel-height" src="images/handshake.jpg">
+			<div class="container carousel-caption carousel-container"></div>
+		</div>
+		<div class="item">
+			<img class="carousel-height" src="images/work.jpg" height="700">
+			<div class="container carousel-caption carousel-container"></div>
+		</div>
+		<div class="item">
+			<img class="carousel-height" src="images/puzzle-people.jpg">
+			<div class="container carousel-caption carousel-container"></div>
+		</div>
+	</div>
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span
+		class="fa fa-cheveron fa-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span>
+	</a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span
+		class="fa fa-cheveron fa-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span>
+	</a>
+</div>
+<div class="row padd-top-10">
+	<div class="col-sm-12">
+		<div class="text-center homebody-title">Our Services</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row padd-top-10">
+		<div ng-repeat="box in serviceBox">
+			<div class="col-sm-4">
+				<label class="label text-center">{{box.imageText}}</label>
+				<div class="service-box">
+					<div class="service-img-container">
+						<img src="{{box.imagePath}}" class="img-responsive image">
+						<div class="{{box.middleCss}}">
+							<span class="{{box.textCss}}">{{box.imageText}}</span>
+							<!-- <span class="fa fa-plus fa-3x"></span> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="gray-box" style="color: #666">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="text-center homebody-title">Why Choosing Us?</div>
+		</div>
+	</div>
+	<div class="row padd-top-10" style="padding-bottom: 10px;">
+		<div class="col-sm-12 chossing-us-box">
+			<div class="container">
+				<div class="col-sm-6">
+					<div class="">
+						<!-- <div class="text-center" style="font-size: 40px;">Why Choosing Us text</div> -->
+						<p style="font-size: 17px;" class="text-left text-lato">GeCorp gives a comprehensive range of consulting,
+							legal services, accounting and financial advisory to many clients from all over the world. We are committed to
+							offering high-standard customer support with professional guidance and to building long lasting transparent
+							rapports with our clients. Each client is treated with ultimate confidentiality and we are apt to serve all kinds
+							of businesses, from start-up entrepreneurs to large multinational organisations, funds and regulated
+							organisations. Viewed as a Global Business Partner by our clients, our unparalleled professional standards,
+							personal attention and a business ideology that prioritises meeting our clients needs, enables us to deliver
+							first-class levels of performance. Our international experience, customer oriented service and ambition to
+							succeed, together with our extensive knowledge of local regulations, give our Clients the benefit, both Locally
+							and Globally.</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="chossing-us-box">
+						<video class="video" controls>
+							<source src="movies/mov_bbb.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row padd-top-10">
+	<div class="col-sm-12">
+		<div class="text-center homebody-title">What Will You Get?</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row padd-top-10">
+		<div class="col-sm-4 fa-center">
+			<i class="fa fa-check fa-9x fa-green" style="height: 100px;"true"></i>
+			<div class="clearRight">
+				<label class="text-20">Full administrative management</label>
+			</div>
+			<div class="clearRight">
+				<label class="text-20 clearRight">of your company</label>
+			</div>
+		</div>
+		<div class="col-sm-4 fa-center">
+			<img src="images/shareholders.png" style="height: 100px;">
+			<div class="clearRight">
+				<label class="text-20">Apponiting shareolders and nominees</label>
+			</div>
+		</div>
+		<div class="col-sm-4 fa-center">
+			<img src="images/timer.png" style="height: 100px;">
+			<div class="clearRight">
+				<label class="text-20">get your corp within 72 hours!</label>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row padd-top-10"></div>
+</div>
