@@ -223,6 +223,7 @@
 		 * 
 		 */
 
+		// TODO: change to types
 		$scope.shores = [ {
 			id : 0,
 			value : "ALL"
@@ -303,6 +304,10 @@
 				if (country.price <= $scope.search.amount) {
 					return true;
 				}
+			} else if ($scope.search.area != "ALL" && $scope.search.amount == "ALL" && $scope.search.isShore != "ALL") {
+				if (country.type == $scope.search.isShore && country.area == $scope.search.area) {
+					return true;
+				}
 			} else if ($scope.search.area != "ALL" && $scope.search.amount != "ALL" && $scope.search.isShore == "ALL") {
 				if (country.area == $scope.search.area && country.price <= $scope.search.amount) {
 					return true;
@@ -327,7 +332,7 @@
 		$scope.serviceBox = [ {
 			imagePath : "images/city.jpg",
 			imageText : "Company formation and administration",
-			textCss : "text-center text-20 text-bold",
+			textCss : "text-center text-15 text-bold",
 			middleCss : "middle"
 		}, {
 			imagePath : "images/shake.jpg",
@@ -346,7 +351,7 @@
 			middleCss : "middle2 width-350"
 		}, {
 			imagePath : "images/financial.jpg",
-			imageText : "Financial Operations",
+			imageText : "Financial,regulation and advisory",
 			textCss : "text-center text-20 text-bold",
 			middleCss : "middle2"
 		}, {
