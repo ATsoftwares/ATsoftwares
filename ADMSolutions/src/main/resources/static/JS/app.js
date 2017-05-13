@@ -35,15 +35,31 @@
 
 		addRout('prices', '/prices', 'prices');
 
-		function addRout(state, url, template) {
+		addRout('formation-and-administraion', '/services/formation-and-administraion', 'formation-and-administraion',
+				'services');
+
+		addRout('trust-formation', '/services/trust-formation', 'trust-formation', 'services');
+
+		addRout('consolting-and-legal', '/services/consolting-and-legal', 'consolting-and-legal', 'services');
+
+		addRout('director-shareholders-services', '/services/director-shareholders-services',
+				'director-shareholders-services', 'services');
+
+		addRout('financial-and-regulation', '/services/financial-and-regulation', 'financial-and-regulation',
+				'services');
+
+		addRout('bank-account-operations', '/services/bank-account-operations', 'bank-account-operations', 'services');
+
+		function addRout(state, url, viewTemplate, cntrlTemplate) {
+			cntrlTemplate = cntrlTemplate == undefined ? viewTemplate : cntrlTemplate;
 			$stateProvider.state(state, {
 				url : url,
 				views : {
 					"header" : header,
 					"footer" : footer,
 					"" : {
-						templateUrl : template + ".html",
-						controller : template + "Cntrl"
+						templateUrl : viewTemplate + ".html",
+						controller : cntrlTemplate + "Cntrl"
 					}
 				}
 			});
