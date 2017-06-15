@@ -16,12 +16,12 @@
 		$urlRouterProvider.otherwise("/home");
 
 		var header = {
-			templateUrl : "header.html",
+			templateUrl : "views/header.html",
 			controller : "headerCntrl"
 		};
 
 		var footer = {
-			templateUrl : "footer.html",
+			templateUrl : "views/footer.html",
 			controller : "footerCntrl"
 		};
 
@@ -58,7 +58,7 @@
 					"header" : header,
 					"footer" : footer,
 					"" : {
-						templateUrl : viewTemplate + ".html",
+						templateUrl : "views/" + viewTemplate + ".html",
 						controller : cntrlTemplate + "Cntrl"
 					}
 				}
