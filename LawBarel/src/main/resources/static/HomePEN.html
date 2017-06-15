@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="CSS/jquery-ui.min.css" />
+    <link rel="stylesheet" href="CSS/StyleEN.css" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <script src="JS/jquery.js"> </script>
+
+    <!--<script type="text/javascript" src="JS/jquery-ui.min.js"> </script>-->
+    <script type="text/javascript" src="JS/bootstrap.min.js"></script>
+    <script type="text/javascript" src="JS/JavaScriptAB.js"></script>
+</head>
+<body class="backgroundColor">
+
+    <!--<div class="headDiv backgroundColor">
+        <img class="signature" src="images/hebrewLogo2.png" />
+        <h2 class="header1">דוד בר-אל, עורך דין </h2>
+    </div>-->
+    <!--<div class="navBar">
+        <ul id="menuList" class="menuList">
+            <li id="homeLable" class="menuLi"><a class="menuLabels" href="newWebPage.aspx">דף הבית</a></li>
+            <li class="menuLi"><a class="menuLabels" href="#news">אודות המשרד</a></li>
+            <li class="menuLi"><a class="menuLabels" href="aharonPractice.aspx">תחומי פעילות</a></li>
+            <li class="menuLi"><a id="contact" class="menuLabels">צור קשר</a></li>
+        </ul>
+    </div>-->
+    <nav id="newHeadBar" class="navbar navbar-default navbar-top">
+        <div class="container">
+            <ul id="eng-nav"class="nav navbar-nav navbar-left">
+                <li><a class="newa" href="HomePEN.html">Home Page</a></li>
+                <li><a class="newa" href="aboutEN.html">About us</a></li>
+                <li><a class="newa" href="#news">Practice areas</a></li>
+                <li><a class="newa" href="HomeP.html">Contact</a></li>
+                <li><img id="logo" class="signature" src="images/hebrewLogo2.png" /></li>
+            </ul>
+        </div>
+        <div>
+            <img id="ISR-lan" src="images/Israel-icon.png" />
+            <img id="USA-lan" src="images/USA-icon.png" />
+        </div>
+    </nav>
+    <div id="homePageImages">
+        <img id="image" src="images/bard.png" alt="pic" width="800" height="350" />
+    </div>
+    <div id="contactDiv">
+
+        <h1 id="contactHead">צור קשר</h1>
+        <h1 id="addressHead" class="address">כתובת</h1>
+        <div>
+            <input id="name" class="inputs" type="text" placeholder="שם מלא" />
+        </div>
+        <div>
+            <input id="email" class="inputs" type="text" placeholder="כתובת אימייל" />
+        </div>
+        <div>
+            <input id="phone" class="inputs" type="text" placeholder="טלפון ליצירת קשר" />
+        </div>
+        <div>
+            <textarea rows="8" cols="22" id="message" class="inputs" placeholder="הודעה"></textarea>
+        </div>
+        <div>
+            <input id="subject" class="inputs" placeholder="נושא" />
+        </div>
+        <div>
+            <button id="send" class="btn btn-info">שליחה</button>
+        </div>
+        <p id="street" class="address">7A Hashalom Rd, Tel-Aviv </p>
+        <p id="building" class="address">Israel</p>
+        <div id="map-canvas" class="address"></div>
+    </div>
+    <div class="bottomFooter">
+        <h1>David Bar-El law office </h1>
+        <h2>7A Hashalom Rd, Tel-Aviv</h2>
+        <p>
+            <span>
+                Email: law.barel@gmail.com
+            </span>
+            <span>
+                |  phone: +972(54)5882095
+            </span>
+            <span>
+                |  Fax: +972-153-77-5620060
+            </span>
+        </p>
+    </div>
+    <script>
+
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map-canvas'), {
+                center: new google.maps.LatLng(31.9507, 34.8869),//{ lat: -34.397, lng: 150.644 },
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD85gyhxftd1MblVp_mMvNzDnJ79cblQoI&callback=initMap"></script>
+</body>
+
+</html>
+

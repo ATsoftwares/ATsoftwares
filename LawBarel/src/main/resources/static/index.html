@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>David Bar-El Law Office</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="initial-scale=1.0" />
+	
+	<!-- include Bootstrap core CSS -->
+	<link rel="stylesheet" href="CSS/jquery-ui.min.css" />
+	<link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.min.css" />
+	<link href="CSS/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="CSS/project.css" />
+	
+	<!-- include jquery js -->
+	<script type="text/javascript" src="JS/JQuery/jquery.js"></script>
+	<script type="text/javascript" src="JS/JQuery/jquery-ui.min.js"></script>
+	<!-- <script type="text/javascript" src="JS/JQuery/jquery.ui.map.min.js"></script> -->
+	
+	<!-- include Bootstrap core JS -->
+	<script type="text/javascript" src="JS/bootstrap/bootstrap.min.js"></script>
+	
+	<!-- include angular js -->
+	<script type="text/javascript" src="JS/angular/angular.min.js"></script>
+	<script type="text/javascript" src="JS/angular/angular-ui-router.min.js"></script>
+	
+	<script type="text/javascript" src="JS/bootstrap/ui-bootstrap.js"></script>
+	
+	<!-- include custom js -->
+	<script type="text/javascript" src="JS/demo.js"></script>
+	<script type="text/javascript" src="JS/controllers.js"></script>
+</head>
+<body ng-app="app">
+	<!-- <div class="col-xs-12"> -->
+	<div ui-view="header"></div>
+	<!-- <div class="container-fluid"> -->
+	<div ui-view></div>
+	<!-- /content view -->
+	<!-- </div> -->
+	<div ui-view="footer"></div>
+	<!-- </div> -->
+</body>
