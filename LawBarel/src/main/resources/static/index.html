@@ -8,36 +8,39 @@
 	<meta name="viewport" content="initial-scale=1.0" />
 	
 	<!-- include Bootstrap core CSS -->
-	<link rel="stylesheet" href="CSS/jquery-ui.min.css" />
-	<link rel="stylesheet" href="CSS/bootstrap/css/bootstrap.min.css" />
-	<link href="CSS/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="CSS/project.css" />
+	<link href="css/jquery/jquery-ui.min.css"  rel="stylesheet"/>
+	<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	
+	<!-- custom css style -->
+	<link rel="stylesheet" href="css/project.css" />
+	<link rel="stylesheet" href="css/carousel.css" />	
+	<link rel="stylesheet" href="css/icons.css" />
+	<link rel="stylesheet" href="css/navbars.css" />
+	<link rel="stylesheet" href="css/text.css" />
+	<link rel="stylesheet" href="css/padd-mrg.css" />
 	
 	<!-- include jquery js -->
-	<script type="text/javascript" src="JS/JQuery/jquery.js"></script>
-	<script type="text/javascript" src="JS/JQuery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/JQuery/jquery.js"></script>
+	<script type="text/javascript" src="js/JQuery/jquery-ui.min.js"></script>
 	<!-- <script type="text/javascript" src="JS/JQuery/jquery.ui.map.min.js"></script> -->
 	
 	<!-- include Bootstrap core JS -->
-	<script type="text/javascript" src="JS/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
 	
 	<!-- include angular js -->
-	<script type="text/javascript" src="JS/angular/angular.min.js"></script>
-	<script type="text/javascript" src="JS/angular/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-ui-router.min.js"></script>
 	
-	<script type="text/javascript" src="JS/bootstrap/ui-bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap/ui-bootstrap.js"></script>
 	
 	<!-- include custom js -->
-	<script type="text/javascript" src="JS/demo.js"></script>
-	<script type="text/javascript" src="JS/controllers.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
+	<script type="text/javascript" src="js/directives.js"></script>
 </head>
 <body ng-app="app">
-	<!-- <div class="col-xs-12"> -->
 	<div ui-view="header"></div>
-	<!-- <div class="container-fluid"> -->
 	<div ui-view></div>
-	<!-- /content view -->
-	<!-- </div> -->
 	<div ui-view="footer"></div>
-	<!-- </div> -->
 </body>
