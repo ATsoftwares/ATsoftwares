@@ -15,8 +15,16 @@
 	top: 0% !important;
 }
 
+.padd-btm-10 {
+	padding-bottom: 10px;
+}
+
 .height-100 {
 	height: 100px;
+}
+
+.padd-right-5 {
+	padding-right: 5px;
 }
 
 .padd-20 {
@@ -41,6 +49,11 @@
 
 .padd-top-40 {
 	padding-top: 40px;
+}
+
+.contatct-box-mrg {
+	margin-top: 70px;
+	margin-left: 100px;
 }
 
 @media screen and (min-width: 768px) {
