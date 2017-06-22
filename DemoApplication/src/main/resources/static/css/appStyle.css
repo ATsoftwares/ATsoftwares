@@ -1,0 +1,21 @@
+input.form-control {
+	padding: 10px 10px;
+	color: #464a4c;
+	background-color: #fff;
+	border-color: #5cb3fd;
+}
+
+input.form-control:focus {
+	color: #464a4c;
+	background-color: #fff;
+	border-color: #4531a6;
+}
+
+.itemsSelected {
+	text-decoration: line-through;
+	color: gray;
+}
+
+.input-error {
+	border: 2px solid red !important;
+}
