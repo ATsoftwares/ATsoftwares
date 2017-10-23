@@ -4,7 +4,7 @@
 
 	/* controllers Module */
 
-	var moduleCntrl = angular.module('controllers',[]);  /* , [ 'ui.bootstrap' ]*/
+	var moduleCntrl = angular.module('controllers',['ui.bootstrap']);  /* , [ 'ui.bootstrap' ]*/
 
 	moduleCntrl.controller('controller', function($rootScope, $scope, $http, $state) {
 
