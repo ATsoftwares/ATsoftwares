@@ -23,6 +23,10 @@
 	height: 100px;
 }
 
+.padd-top-10 {
+	padding-top: 10px;
+}
+
 .padd-right-5 {
 	padding-right: 5px;
 }
@@ -51,15 +55,7 @@
 	padding-top: 40px;
 }
 
-.contatct-box-mrg {
-	margin-top: 70px;
-	margin-left: 100px;
-}
-
 @media screen and (min-width: 768px) {
-	.btm-footer {
-		margin-left: 6em;
-	}
 	.margin-btm {
 		margin-bottom: 5em;
 	}
@@ -71,9 +67,6 @@
 @media screen and (max-width: 500px) {
 	.image7-size {
 		width: 72.5%;
-	}
-	.btm-footer {
-		margin-left: 2em;
 	}
 	.margin-btm {
 		margin-bottom: 10px;
