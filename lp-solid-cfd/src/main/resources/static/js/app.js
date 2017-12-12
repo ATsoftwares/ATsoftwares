@@ -27,12 +27,6 @@
 
 		addRout('home', '/home', 'home');
 
-		addRout('about', '/about', 'about');
-
-		addRout('activities', '/activities', 'activities');
-
-		addRout('contact', '/contact', 'contact');
-
 		function addRout(state, url, template) {
 			$stateProvider.state(state, {
 				url : url,

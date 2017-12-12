@@ -20,15 +20,13 @@
 }
 
 .carousel-height {
-	min-height: 500px;
+	min-height: 650px;
 	width: 100%;
-/* 	filter: brightness(70%); */
 	max-height: 650px;
 }
 
 @media screen and (min-width: 768px) {
 	.carousel-indicators {
-		top: 20px !important;
 		height: 20px;
 	}
 }
